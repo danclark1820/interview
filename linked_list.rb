@@ -12,7 +12,7 @@ class LinkedList
     end
   end
 
-  # def self.index
+  # def [](index)
   # end
 
   # def insert(index, value)
