@@ -4,7 +4,6 @@ def fib(n)
   elsif n == 1 || n == 2
     1
   else
-    fibonacci(n - 1) + fibonacci(n - 2)
+    fib(n - 1) + fib(n - 2)
   end
 end
-
