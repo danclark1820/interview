@@ -1,15 +1,20 @@
 require 'pry'
-def  insertionSort(ar)
-  val = ar[-1]
-  i = ar.length - 2
-  while i >= -1
-    if ar[i] > val
-      ar[i+1] = ar[i]
-    elsif ar[i] < val
-      ar[i+1] = val
-      i = -2
+def insertionSort(ar)
+  val = ar[ar.length-1]
+  i = ar.length - 1
+  while i > 0
+    if val < ar[i-1]
+      ar[i] = ar[i-1]
+    elsif ar[i] >= ar[i-1]
+      ar[i] = val
+      puts ar.join(" ")
+      break
     end
+    puts ar.join(" ")
     i -= 1
+  end
+  if i == 0
+    ar[0] = val
     puts ar.join(" ")
   end
 end
